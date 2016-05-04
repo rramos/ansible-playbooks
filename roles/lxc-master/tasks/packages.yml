@@ -1,0 +1,8 @@
+- name: Install packages required for LXC
+  apt:
+    name: '{{ item }}'
+    state: 'present'
+    install_recommends: False
+  with_items: lxc_distribution_packages[ansible_distribution]
+  tags: lxc-master-packages
+

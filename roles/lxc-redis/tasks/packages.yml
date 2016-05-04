@@ -1,0 +1,7 @@
+- name: "REDIS container Packages install"
+  apt: name={{item}} state=installed
+  become: yes
+  with_items:
+       - git
+       - wget
+  tags: lxc-redis-packages

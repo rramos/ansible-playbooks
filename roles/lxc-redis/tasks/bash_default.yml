@@ -1,0 +1,9 @@
+- name: "Default profile settings"
+  copy: src=files/.profile dest=~/.profile mode=0755
+  tags: lxc-redis-default-bash-settings
+
+- name: "Default bash settings"
+  copy: src=files/.bashrc dest=~/.bashrc mode=0755
+  tags: lxc-redis-default-bash-settings
+
+

@@ -1,0 +1,42 @@
+127.0.0.1	localhost
+
+# The following lines are desirable for IPv6 capable hosts
+::1     ip6-localhost ip6-loopback
+fe00::0 ip6-localnet
+ff00::0 ip6-mcastprefix
+ff02::1 ip6-allnodes
+ff02::2 ip6-allrouters
+
+# Spark LXC-containers
+10.0.3.140	spark1
+10.0.3.141	spark2
+10.0.3.142	spark3
+
+# MongoDB LXC-containers
+10.0.3.150      mongo1
+10.0.3.151      mongo2
+
+# REDIS LXC-containers
+10.0.3.160      redis1
+10.0.3.161      redis2
+
+# Hadoop LXC Containers
+10.0.3.111	hadoop11
+10.0.3.112      hadoop12
+10.0.3.113      hadoop13
+10.0.3.114      hadoop14
+10.0.3.115      hadoop15
+10.0.3.116      hadoop16
+10.0.3.117      hadoop17
+10.0.3.118      hadoop18
+10.0.3.119      hadoop19
+10.0.3.121      hadoop21
+10.0.3.122      hadoop22
+10.0.3.123      hadoop23
+10.0.3.124      hadoop24
+10.0.3.125      hadoop25
+10.0.3.126      hadoop26
+10.0.3.127      hadoop27
+10.0.3.128      hadoop28
+10.0.3.129      hadoop29
+

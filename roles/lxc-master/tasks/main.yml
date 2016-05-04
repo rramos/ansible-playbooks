@@ -1,0 +1,19 @@
+# Include LXC-Master packages
+- include: packages.yml
+
+# Include /etc/hosts file
+- include: hosts.yml
+
+# Include LXC-nework configuration
+- include: lxc-net.yml
+
+# Create Spark containers
+- include: spark-containers.yml
+
+# Create MongoDB Containers
+- include: mongodb-containers.yml
+
+# Create REDIS Containers
+- include: redis-containers.yml
+
+

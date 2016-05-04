@@ -1,0 +1,14 @@
+# Inventory groups
+
+[lxc-spark]
+spark1
+
+[lxc-mongodb]
+mongo1
+
+[lxc-redis]
+redis1
+
+[lxc-master]
+localhost
+

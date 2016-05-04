@@ -1,0 +1,10 @@
+- name: "Default default dnsmasq settings"
+  copy: src=files/dnsmasq.conf dest=/etc/lxc/dnsmasq.conf mode=0755
+  become: true
+  tags: lxc-master-default-lxc-net
+
+- name: "Default default lxc-net settings"
+  copy: src=files/lxc-net dest=/etc/default/lxc-net mode=0755
+  become: true
+  tags: lxc-master-default-lxc-net
+

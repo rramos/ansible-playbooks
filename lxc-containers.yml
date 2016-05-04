@@ -1,0 +1,31 @@
+# file: lxc-containers.yml
+- name: "LXC master(s) deployment"
+  hosts: lxc-master
+  roles:
+    - lxc-master
+  tags: lxc-master
+
+- name: "Configure LXC Container(s): Spark"
+  hosts: lxc-spark
+  roles:
+    - lxc-spark
+  tags: lxc-spark
+
+- name: "Configure LXC Container(s): MongoDB"
+  hosts: lxc-mongodb
+  roles:
+    - lxc-mongodb
+  tags: lxc-mongodb
+
+- name: "Configure LXC Container(s): REDIS"
+  hosts: lxc-redis
+  roles:
+    - lxc-redis
+  tags: lxc-redis
+
+#- name: "LXC Container(s): Hadoop Cluster"
+#  hosts: lxc-hadoop-cluster
+#  roles:
+#    - lxc-hadoop-cluster
+
+
