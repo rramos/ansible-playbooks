@@ -4,4 +4,7 @@
   with_items:
        - git
        - wget
+       - redis-server
+       - redis-tools
+       - tree
   tags: lxc-redis-packages

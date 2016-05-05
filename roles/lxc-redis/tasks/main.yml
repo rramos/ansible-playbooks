@@ -1,2 +1,8 @@
-- include: packages.yml 
+- include: packages.yml  
 - include: bash_default.yml
+- include: sysctl.yml
+- include: services.yml
+- include: redis-conf.yml
+
+# Tests
+- include: redis-test.yml
