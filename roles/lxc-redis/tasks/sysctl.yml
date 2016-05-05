@@ -1,0 +1,7 @@
+# Redis kernel parameters
+- name: "Added kernel parameters for REDIS"
+  sysctl: name=vm.overcommit_memory value=1 state=present
+  become: true
+  notify:
+    - reload sysctl
+  tags: lxc-redis-kernel-parameters

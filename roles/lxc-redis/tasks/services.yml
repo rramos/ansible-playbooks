@@ -1,0 +1,5 @@
+# Required REDIS services
+- name: "Make sure redis-server service is started"
+  service: name=redis-server state=started
+  become: true
+  tags: lxc-redis-services

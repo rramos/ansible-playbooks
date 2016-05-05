@@ -1,0 +1,10 @@
+# redis client test
+- name: "Test | Redis cli Ping test"
+  shell: /usr/bin/redis-cli ping
+  register: cmd_result
+  tags: test-lxc-redis
+
+- assert:
+    that:
+      - "'PONG' in cmd_result.stdout"
+    tags: test-lxc-redis
