@@ -7,19 +7,6 @@ ff00::0 ip6-mcastprefix
 ff02::1 ip6-allnodes
 ff02::2 ip6-allrouters
 
-# Spark LXC-containers
-10.0.3.140	spark1
-10.0.3.141	spark2
-10.0.3.142	spark3
-
-# MongoDB LXC-containers
-10.0.3.150      mongo1
-10.0.3.151      mongo2
-
-# REDIS LXC-containers
-10.0.3.160      redis1
-10.0.3.161      redis2
-
 # Hadoop LXC Containers
 10.0.3.111	hadoop11
 10.0.3.112      hadoop12
@@ -39,4 +26,29 @@ ff02::2 ip6-allrouters
 10.0.3.127      hadoop27
 10.0.3.128      hadoop28
 10.0.3.129      hadoop29
+
+# Spark LXC-containers
+10.0.3.140	spark1
+10.0.3.141	spark2
+10.0.3.142	spark3
+
+# MongoDB LXC-containers
+10.0.3.150      mongo1
+10.0.3.151      mongo2
+
+# REDIS LXC-containers
+10.0.3.160      redis1
+10.0.3.161      redis2
+
+# RUNDECK LXC-containers
+10.0.3.170      rundeck1
+
+# Grafana LXC-containers
+10.0.3.180      grafana1
+
+# Prometheus LXC-containers
+10.0.3.190      prometheus1
+
+# Jupyter LXC-containers
+10.0.3.200      jupyter1
 

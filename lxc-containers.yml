@@ -1,10 +1,4 @@
 # file: lxc-containers.yml
-- name: "LXC master(s) deployment"
-  hosts: lxc-master
-  roles:
-    - lxc-master
-  tags: lxc-master
-
 - name: "Configure LXC Container(s): Spark"
   hosts: lxc-spark
   roles:
@@ -22,6 +16,12 @@
   roles:
     - lxc-redis
   tags: lxc-redis
+
+- name: "Configure LXC Container(s): JUPYTER"
+  hosts: lxc-jupyter
+  roles:
+    - lxc-jupyter
+  tags: lxc-jupyter
 
 #- name: "LXC Container(s): Hadoop Cluster"
 #  hosts: lxc-hadoop-cluster

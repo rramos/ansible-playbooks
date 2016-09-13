@@ -1,0 +1,19 @@
+# Create JUPYTER containers
+- name: "Jupyter | Create a started container"
+  lxc_container:
+    name: jupyter1
+    container_log: true
+    state: started
+    config: ~/.config/lxc/default.conf
+    container_command: |
+      sudo apt-get update
+      sudo apt-get install -y openssh-server
+      sudo apt-get install -y python
+      useradd rramos
+      mkdir -p /home/rramos/.ssh
+      echo {{ default_user_key }} > /home/{{ default_user_login }}/.ssh/authorized_keys
+      chown -R {{ default_user_login }}:{{ default_user_login }} /home/{{ default_user_login }}
+      echo "{{ default_user_login }} ALL=(ALL) NOPASSWD:ALL" > /etc/sudoers.d/{{ default_user_login }}
+      sudo usermod -s /bin/bash {{ default_user_login }}
+    template_options: -d ubuntu -r xenial -a amd64
+

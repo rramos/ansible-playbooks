@@ -3,3 +3,6 @@
 lxc_distribution_packages:
   Debian:  [ 'debootstrap', 'python3', 'lxc', 'init-system-helpers' ]
   Ubuntu:  [ 'debootstrap', 'python3', 'lxc', 'lxc-templates', 'libcgmanager0' ]
+
+default_user_login: 'rramos'
+default_user_key: 'ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQDCwLmBOt0YBkp36ziO9qra4wwmWUW+QT+gEEDqtRY55hSK5FVmwSjT5Swjfy61sSHpqZ4aZ95vaa7Tjh6q7Pu33utWNf+6oMNPPtEHg1puYggWkmGkoHtF10qNiVV60k4+XaP+xIc8T2A6/KZ4PpCf6XOIPavH8GfQe4yPl1LM9YytnTaNiOzL7uhSn01k67Q4nWX+4mikiQuuSBj7TwodFkubGW++S7QNQMbE2H7kVt5vt/2THgD+t1dwiAn1Xlh1JVJqXf9G/h6Lhf1tQsundsU7naRp+lpNhwVUNbwHDT3juxB6JDP1E/OJWXkSmEHHL+joA0zLIxTaxZ6cWsBv rramos@buldozer'
