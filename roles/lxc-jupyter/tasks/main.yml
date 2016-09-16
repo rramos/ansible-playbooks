@@ -1,0 +1,12 @@
+
+- name: "Jupyter | Packages"
+  include: packages.yml 
+  tags: ['lxc-jupyter-default-bash-settings','lxc-jupyter']  
+
+- name: "Jupyter | Default bash setup"
+  include: bash_default.yml
+  tags: ['lxc-jupyter-default-bash-settings','lxc-jupyter']
+
+- name: "Jupyter | Install pip requirements"
+  include: pip_requirements.yml
+  tags: ['lxc-jupyter-pip','lxc-jupyter']

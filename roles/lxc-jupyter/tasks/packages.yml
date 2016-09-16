@@ -1,0 +1,11 @@
+- name: "Jupyter |  Container Packages install"
+  apt: name={{item}} state=installed
+  become: yes
+  with_items:
+       - git
+       - wget
+       - python-pip
+       - python-setuptools 
+       - python-dev 
+       - build-essential
+  tags: ['lxc-jupyter-packages','lxc-jupyter']
