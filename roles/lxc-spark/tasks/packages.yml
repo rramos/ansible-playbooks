@@ -4,4 +4,4 @@
   with_items:
        - git
        - wget
-  tags: lxc-spark-packages
+  tags: ['lxc-spark-packages']

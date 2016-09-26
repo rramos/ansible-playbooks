@@ -1,0 +1,13 @@
+[Unit]
+Description=Jupyter notebook
+[Service]
+Type=simple
+PIDFile=/var/run/jupyter-nodebook.pid
+ExecStart=/usr/local/bin/jupyter notebook --config /etc/jupyter/jupyter_notebook_config.py --no-browser
+WorkingDirectory=/etc/jupyter/notebooks
+User=root
+Group=root
+PermissionsStartOnly=true
+[Install]
+WantedBy=multi-user.target
+

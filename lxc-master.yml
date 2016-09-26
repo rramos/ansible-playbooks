@@ -1,0 +1,6 @@
+- name: "LXC master(s) deployment"
+  hosts: lxc-master
+  roles:
+    - lxc-master
+  tags: lxc-master
+

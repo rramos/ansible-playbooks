@@ -1,2 +1,9 @@
-- include: packages.yml 
-- include: bash_default.yml
+
+- name: "Spark | Install packages"
+  include: packages.yml
+  tags: ['lxc-spark-packages','lxc-packages']
+
+- name: "Spark | Install bash defaults"
+  include: bash_default.yml
+  tags: ['lxc-spark-bash','lxc-spark']
+

@@ -1,0 +1,6 @@
+- name: "Jupyter | pip requirements"
+  pip: name={{item}} state=present
+  become: yes
+  with_items:
+       - jupyter 
+  tags: ['lxc-jupyter-pip','lxc-jupyter']

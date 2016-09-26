@@ -1,0 +1,8 @@
+- name: "Jupyter | Default profile settings"
+  copy: src=files/.profile dest=~/.profile mode=0755
+  tags: ['lxc-jupyter-default-bash-settings','lxc-jupyter']
+
+- name: "Jupyter | Default bash settings"
+  copy: src=files/.bashrc dest=~/.bashrc mode=0755
+  tags: ['lxc-jupyter-default-bash-settings','lxc-jupyter']
+
