@@ -1,0 +1,32 @@
+- name: "Jupyter |  Service Configuration"
+  become: yes
+  file: path=/etc/jupyter state=directory mode=0755 
+  tags: ['lxc-jupyter-cfg','lxc-jupyter']
+
+- name: "Jupyter |  Create notebooks dir"
+  become: yes
+  file: path=/etc/jupyter/notebooks state=directory mode=0755
+  tags: ['lxc-jupyter-cfg','lxc-jupyter']
+
+- name: "Jupyter |  Service Configuration"
+  become: yes
+  copy: src=files/jupyter/jupyter_notebook_config.py dest=/etc/jupyter/jupyter_notebook_config.py mode=0755  
+  tags: ['lxc-jupyter-cfg','lxc-jupyter']
+
+- name: "Jupyter |  Service Configuration"
+  become: yes
+  copy: src=files/systemd/jupyter.service dest=/lib/systemd/system/jupyter.service mode=0755
+  tags: ['lxc-jupyter-cfg','lxc-jupyter']
+
+- name: "Jupyter | Ensure jupyter launches"
+  become: yes
+  command: systemctl enable jupyter
+  tags: ['lxc-jupyter-systemd','lxc-jupyter']
+
+- name: "Jupyter | Start service"
+  become: yes
+  command: systemctl start jupyter
+  tags: ['lxc-jupyter-systemd','lxc-jupyter']
+
+
+
