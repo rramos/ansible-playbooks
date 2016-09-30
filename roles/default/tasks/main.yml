@@ -1,0 +1,9 @@
+
+- name: "Default | Install packages"
+  include: packages.yml
+  tags: ['default-packages']
+
+- name: "Default | Install bash defaults"
+  include: bash_default.yml
+  tags: ['default-bash']
+

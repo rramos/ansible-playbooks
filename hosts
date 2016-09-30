@@ -15,3 +15,5 @@ localhost
 [lxc-jupyter]
 jupyter1
 
+[lxc-prometheus]
+prometheus1

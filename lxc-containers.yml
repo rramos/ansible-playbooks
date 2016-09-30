@@ -3,25 +3,32 @@
   hosts: lxc-spark
   roles:
     - lxc-spark
-  tags: lxc-spark
+  tags: ['lxc-spark','lxc-containers']
 
 - name: "Configure LXC Container(s): MongoDB"
   hosts: lxc-mongodb
   roles:
     - lxc-mongodb
-  tags: lxc-mongodb
+  tags: ['lxc-mongodb','lxc-containers']
 
 - name: "Configure LXC Container(s): REDIS"
   hosts: lxc-redis
   roles:
     - lxc-redis
-  tags: lxc-redis
+  tags: ['lxc-redis','lxc-containers']
 
 - name: "Configure LXC Container(s): JUPYTER"
   hosts: lxc-jupyter
   roles:
     - lxc-jupyter
-  tags: lxc-jupyter
+  tags: ['lxc-jupyter','lxc-containers']
+
+- name: "Configure LXC Container(s): Prometheus"
+  hosts: lxc-prometheus
+  roles:
+    - default
+    - ansible-prometheus
+  tags: ['lxc-prometheus','lxc-containers','ansible-prometheus']
 
 #- name: "LXC Container(s): Hadoop Cluster"
 #  hosts: lxc-hadoop-cluster
