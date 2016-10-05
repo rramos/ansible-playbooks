@@ -3,8 +3,9 @@
   tags: ['lxc-master-packages','lxc-master']
 
 # Include /etc/hosts file
-- include: hosts.yml
-  tags: ['lxc-master-hosts','lxc-master']
+# Better not change /etc/hosts
+#- include: hosts.yml
+#  tags: ['lxc-master-hosts','lxc-master']
 
 # Include LXC-nework configuration
 - include: lxc-net.yml
@@ -26,5 +27,7 @@
 - include: jupyter-containers.yml
   tags: ['lxc-master-jupyter','lxc-master']
 
-
+# Create PROMETHEUS Containers
+- include: prometheus-containers.yml
+  tags: ['lxc-master-prometheus','lxc-master']
 
