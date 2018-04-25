@@ -1,0 +1,19 @@
+---
+- name: "collectd Packages install"
+  apt: name={{item}} state=installed
+  become: yes
+  with_items:
+       - collectd
+  tags: collectd-packages
+
+#- name: Install Collectd
+#  apt: pkg=collectd={{ collectd_version }}
+#       install_recommends={{ collectd_install_recommends }}
+#       state=present
+
+- name: Configure Collectd
+  become: yes
+  template: src=collectd.conf.j2 dest=/etc/collectd/collectd.conf
+  notify:
+    - Restart Collectd
+

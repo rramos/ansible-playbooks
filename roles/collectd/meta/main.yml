@@ -1,0 +1,14 @@
+---
+galaxy_info:
+  author: Rui Ramos
+  description: An Ansible role for installing Collectd and setup for prometheus.
+  license: Apache
+  min_ansible_version: 1.2
+  platforms:
+  - name: Ubuntu
+    versions:
+    - xenial
+  categories:
+  - system
+  - monitoring
+dependencies: []

@@ -1,0 +1,14 @@
+---
+# Tasks
+- include: packages.yml
+
+
+## Install required software
+
+## Install exporter
+
+## Configure
+
+## Activate service
+
+

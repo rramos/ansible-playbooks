@@ -1,0 +1,13 @@
+---
+- name: "collectd_export binary install"
+  become: yes
+  copy: src=files/collectd_exporter dest=/usr/local/bin/collectd_exporter mode=755
+  tags: collectd_exporter
+
+- name: "configure systemd service"
+  become: yes
+  copy: src=files/collectd-exporter.service dest=/etc/systemd/system/collectd-exporter.service
+  notify:
+    - restart collectd-exporter
+  tags: collectd_exporter
+

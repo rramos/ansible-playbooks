@@ -1,0 +1,7 @@
+- name: "Collectd deployment"
+  hosts: collectd-hosts
+  roles:
+    - collectd
+    - collectd_exporter
+  tags: collectd
+

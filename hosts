@@ -17,3 +17,6 @@ jupyter1
 
 [lxc-prometheus]
 prometheus1
+
+[collectd-hosts]
+localhost
